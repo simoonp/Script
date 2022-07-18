@@ -9,3 +9,11 @@
 
 [截取部分音频02](sh/cut_mp3_by_mp3.sh)：使用ffmpeg截取部分音频
 
+[ubuntu18_static_ip.sh](sh/ubuntu18_static_ip.sh)：设置静态IP与网关
+
+[ip.sh](sh/ip.sh)：设置ROS的主机与从机IP
+
+[start.sh](sh/start.sh)[trans.sh](trans.sh)：从远程主机上下载视频，结合定时任务使用
+
+[vs_error.sh](sh/vs_error.sh)：修复VScode更新后无法远程连接主机/wls虚拟机的问题，配合[vs_error](sh/vs_error )使用
+

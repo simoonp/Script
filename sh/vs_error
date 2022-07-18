@@ -1,0 +1,1 @@
+"$ROOT/node" ${INSPECT:-} "$ROOT/out/server-main.js" --compatibility=1.63 --accept-server-license-terms "$@"
