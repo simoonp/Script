@@ -17,3 +17,4 @@
 
 [vs_error.sh](sh/vs_error.sh)：修复VScode更新后无法远程连接主机/wls虚拟机的问题，配合[vs_error](sh/vs_error )使用
 
+[setlog.sh](sh/setlog.sh)：通过`script`指令，记录自动记录所有终端的数据，并将记录记过保存到`~/log/`中
