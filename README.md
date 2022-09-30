@@ -18,3 +18,13 @@
 [vs_error.sh](sh/vs_error.sh)：修复VScode更新后无法远程连接主机/wls虚拟机的问题，配合[vs_error](sh/vs_error )使用
 
 [setlog.sh](sh/setlog.sh)：通过`script`指令，记录自动记录所有终端的数据，并将记录记过保存到`~/log/`中
+
+[install_nvidia_driver01.sh](sh/install_nvidia_driver01.sh)和[install_nvidia_driver02.sh](sh/install_nvidia_driver02.sh)：用于给exsi虚拟机安装nvidia和cuda驱动
+
+[docker_install.sh](sh/docker_install.sh)：安装docker
+
+[nvidia-container-runtime-script.sh](sh/nvidia-container-runtime-script.sh)：安装docker nvidia-container
+
+[set_gpu_web.sh](sh/set_gpu_web.sh)：设置 gpu-jupyter
+
+[read.sh](sh/read.sh)：批量设置gpu-jupyter
