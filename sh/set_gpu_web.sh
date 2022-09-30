@@ -5,7 +5,8 @@ while getopts ":h" optname
 do
 	case "$optname" in
 		"h")
-			echo "至少需要4个参数，指定用户名、将要创建的容器名"
+			echo "至少需要4个参数，指定用户名、将要创建的容器名，映射的ssh端口、web端口，2个可选参数为镜像名和卷挂载位置"
+			echo '容器信息保存在 info_docker 中'
 			echo '例如：'
 			echo '     ./set_gpu_web.sh user_name docker_name ssh_port web_port'
 			exit
