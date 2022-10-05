@@ -1,6 +1,8 @@
 echo "请提前切换到 root"
 sleep 2s
-
+user_name=$(ls /home | awk '{print $1}')
+echo "当前用户名为：$user_name"
+bashrc_path=/home/$user_name/.bashrc
 echo "安装nvidia驱动"
 nvi=$(ls NVIDIA-Linux-*)
 echo "安装的驱动为：$nvi"
@@ -20,10 +22,11 @@ du -sh $cuda_path1
 cuda_path2="/usr/local/cuda/lib64"
 echo $cuda_path2
 du -sh $cuda_path2
+du -sh $bashrc_path
 echo "注意检查文件夹是否存在"
 sleep 5s
-echo "export PATH=$cuda_path1:"'$PATH' >> /home/gpu/.bashrc
-echo "export LD_LIBRARY_PATH=$cuda_path2:"'$LD_LIBRARY_PATH' >> /home/gpu/.bashrc
+echo "export PATH=$cuda_path1:"'$PATH' >> $bashrc_path
+echo "export LD_LIBRARY_PATH=$cuda_path2:"'$LD_LIBRARY_PATH' >> $bashrc_path
 echo "开启图形界面"
 sleep 5s
 systemctl set-default graphical.target
