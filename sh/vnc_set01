@@ -1,5 +1,5 @@
-echo "确保补签已切换到root"
-sleep 5
+echo "确保已切换到root，否则退出，切换到root再执行"
+sleep 10
 apt update
 apt install language-pack-zh-hans -y
 
