@@ -32,10 +32,10 @@ fcitx-table-wubi
 
 # 修改为文件夹所有者
 path=$(ls /home/)
-chown -R docker:docker /home/$path
+chown -R $path:$path /home/$path
 
-su docker -c "vncpasswd"
+su $path -c "vncpasswd"
 file=$(find /home/ -name "vnc_set02")
-su docker -s /bin/bash $file
+su $path -s /bin/bash $file
 
 exit
