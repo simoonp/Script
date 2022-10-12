@@ -28,3 +28,5 @@
 [set_gpu_web.sh](sh/set_gpu_web.sh)：设置 gpu-jupyter
 
 [read.sh](sh/read.sh)：批量设置gpu-jupyter
+
+[vnc_set01](sh/vnc_set01)、[vnc_set02](sh/vnc_set02)：给docker容器配置vnc服务端，注意脚本里的默认用户名与相关文件路径
