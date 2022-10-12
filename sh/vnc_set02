@@ -1,0 +1,18 @@
+
+echo "普通用户执行"
+sleep 5
+
+
+echo "!/bin/sh" 	>> ~/.vnc/xstartup 
+echo unset SESSION_MANAGER 	>> ~/.vnc/xstartup 
+echo unset DBUS_SESSION_BUS_ADDRESS 	>> ~/.vnc/xstartup 
+echo export GTK_IM_MODULE=fcitx 	>> ~/.vnc/xstartup 
+echo export QT_IM_MODULE=fcitx 	>> ~/.vnc/xstartup 
+echo export XMODIFIERS=@im=fcitx 	>> ~/.vnc/xstartup 
+echo export LANG=zh_CN.UTF-8 	>> ~/.vnc/xstartup 
+echo fcitx -r 	>> ~/.vnc/xstartup 
+echo startxfce4 	>> ~/.vnc/xstartup 
+
+chmod u+x ~/.vnc/xstartup
+
+vncserver :1 -localhost no -geometry=1600x900

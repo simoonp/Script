@@ -1,0 +1,41 @@
+echo "确保补签已切换到root"
+sleep 5
+apt update
+apt install language-pack-zh-hans -y
+
+file=/etc/environment
+echo LANG=\"zh_CN.UTF-8\" >> $file
+echo LANGUAGE=\"zh_CN:zh:en_US:en\" >> $file
+
+file=/etc/profile
+echo LANG=\"zh_CN.UTF-8\" >> $file
+echo LANGUAGE=\"zh_CN:zh:en_US:en\" >> $file
+
+file=/root/.bashrc
+echo LANG=\"zh_CN.UTF-8\" >> $file
+echo LANGUAGE=\"zh_CN:zh:en_US:en\" >> $file
+
+apt install tigervnc-standalone-server -y
+#精简安装
+apt-get install -y --no-install-recommends xubuntu-desktop 
+#不安装这个会报错Failed to execute child process “dbus-lauch”(xxxxx)
+apt install dbus-x11 -y
+#安装中文字体 ,否则会出现乱码
+apt install fonts-wqy-microhei -y
+#安装中文语言名和fcitx中文输入法
+apt install -y \
+gnome-user-docs-zh-hans \
+language-pack-gnome-zh-hans \
+fcitx \
+fcitx-pinyin \
+fcitx-table-wubi
+
+# 修改为文件夹所有者
+path=$(ls /home/)
+chown -R docker:docker /home/$path
+
+su docker -c "vncpasswd"
+file=$(find /home/ -name "vnc_set02")
+su docker -s /bin/bash $file
+
+exit
