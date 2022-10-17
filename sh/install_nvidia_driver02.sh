@@ -29,6 +29,7 @@ echo "export PATH=$cuda_path1:"'$PATH' >> $bashrc_path
 echo "export LD_LIBRARY_PATH=$cuda_path2:"'$LD_LIBRARY_PATH' >> $bashrc_path
 
 echo "安装cuDNN，请提前下载文件"
+# https://developer.nvidia.com/rdp/cudnn-download
 sleep 5s
 "安装依赖"
 dpkg -i libcudnn8_*cuda*_amd64.deb
