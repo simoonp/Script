@@ -12,7 +12,7 @@ nvi=$(ls NVIDIA-Linux-*)
 
 echo "=========================安装依赖"
 sleep 5s
-apt-get install gcc g++make -y
+apt-get install gcc g++ make -y
 apt-get install build-essential gcc-multilib dkms -y
 
 
