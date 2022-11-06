@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # 计算一个文件夹下所有文件的md5值，不接参数默认是当前文件夹，可以接1个参数，表示文件夹名
+# example：
+#	./check_md5.sh 
+#	./check_md5.sh file_name
+#	./check_md5.sh dir_name
 function md5_all {
 	if [ $# -eq 0 ]
 	then
