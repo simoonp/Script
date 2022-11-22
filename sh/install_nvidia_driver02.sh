@@ -9,6 +9,10 @@ echo "安装的驱动为：$nvi"
 sleep 5s
 ./$nvi -no-opengl-files -no-x-check -no-nouveau-check
 # ./NVIDIA-Linux-x86_64-460.91.03_2080Ti.run -no-opengl-files -no-x-check -no-nouveau-check
+echo "加载驱动"
+modprobe nvidia
+echo "测试"
+nvidia-smi
 
 echo "安装cuda"
 cud=$(ls cuda_*)
