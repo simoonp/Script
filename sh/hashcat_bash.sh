@@ -14,4 +14,4 @@ apt-get update && \
     
 update-pciids
 
-git clone https://github.com/hashcat/hashcat.git && cd hashcat && git checkout ${HASHCAT_VERSION} && make install -j4
+git clone https://github.com/hashcat/hashcat.git && cd hashcat && make install -j4
